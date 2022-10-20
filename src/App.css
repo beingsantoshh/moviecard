@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
   color: white;
+  background-color: #5a5aa3;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  box-sizing: border-box;
+}
+div .column {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* flex-direction: row; */
+}
+.column {
+  display: flex;
+  float: left;
+  align-items: center;
+  width: 25%;
+  padding: 0 10px;
+  margin: 3%;
+  /* justify-content: space-around; */
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-title {
+  position: absolute;
+  left: 80px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hover14 {
+  box-shadow: 4px 4px 10px rgb(172, 161, 161);
+  margin: 50px;
+  border-radius: 11px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5%;
+}
+.hover14 img {
+  width: 300px;
+  height: 18rem;
+  object-fit: cover;
+}
+.ho:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.hover14:hover {
+  box-shadow: 5px 5px 10px rgb(116, 111, 111);
+  position: relative;
+  top: -2px;
+  right: 2px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+@media only screen and (max-width: 600px) {
+  .hover14 img {
+    width: 300px;
+    height: 18rem;
+    object-fit: cover;
   }
-  to {
-    transform: rotate(360deg);
+  .hover14 {
+    box-shadow: 4px 4px 10px rgb(172, 161, 161);
+    margin: 7px;
+    padding: 5%;
+  }
+  .column {
+    float: left;
+    width: 200px;
+    padding: 0 10px;
+    margin-left: 25%;
+    justify-content: center;
+    justify-items: center;
+    display: block;
+    align-items: center;
   }
 }

@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Data from './data';
+import Card from './Card'
 
-function App() {
+function Movie(value) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Card
+        imgsrc={value.src}
+        title={value.title}
+        year={value.year}
+        distributor={value.distributor}
+        amount={value.amount}
+        ranking={value.ranking}
+      />
     </div>
   );
 }
 
-export default App;
+export default function App() {
+  return <>
+    <h1 className='nav-title'>Movie List</h1>
+    {Data.map(Movie)}
+  </>
+}
